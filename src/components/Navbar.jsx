@@ -1,6 +1,13 @@
 import { Search, ShoppingCartOutlined } from '@mui/icons-material'
 import { Badge } from '@mui/material'
 import React from 'react'
+import { Routes, Route ,Link } from 'react-router-dom'
+// import Categories from '../components/Categories'
+
+import Cart from '../pages/Cart'
+import CategoryPage from '../pages/CategoryPage'
+import Home from '../pages/Home'
+import ProductPage from '../pages/ProductPage'
 
 const Navbar = () => {
     const style = 'text-[14px] cursor-pointer ml-[25px] mobile:ml-[10px]'
@@ -25,12 +32,12 @@ const Navbar = () => {
             </div>
             {/* Logo */}
             <div className='center flex-1 text-center '>
-                <div className='logo font-bold text-lg mobile:text-sm'>Summer Kings</div>
+                <Link to="/" className='logo font-bold text-lg mobile:text-sm'>Summer Kings</Link>
             </div>
             {/* Right div */}
             <div className='right flex flex-1 items-center justify-end mobile:flex-[1.5] mobile:justify-center'>
-                <div className={style}>Register</div>
-                <div className={style}>Sign in</div>
+                <Link to="/register" className={style}>Register</Link>
+                <Link to="/login" className={style}>Sign in</Link>
                 <div className={style}>
                 <Badge badgeContent={2} color='primary'>
                     <ShoppingCartOutlined/>
@@ -38,8 +45,9 @@ const Navbar = () => {
                 </div>
             </div>
             
-        </div>      
+        </div>    
     </div>
+    
   )
 }
 

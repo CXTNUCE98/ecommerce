@@ -34,7 +34,7 @@ const Slider = () => {
                 <ArrowLeftOutlined style={{fontSize: '50px'}} onClick={prevSlide}/>
             </div>
             {/* slide div */}
-            {slides.map((slide, index)=>{
+            {slides.map((slide, index) => {
                 if(index === activeSlide) {
                     return (
                         <div className={`wrapper flex w-[100%] h-[500px] justify-center items-center shadow-2xl 
